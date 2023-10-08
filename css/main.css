@@ -1,0 +1,626 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(252, 249, 249);
+}
+
+.about .section-info h3, .kijker h3, .contact .section-info h3 {
+  font-family: "Chewy", cursive;
+  letter-spacing: 2px;
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 700px) {
+  p {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  p {
+    font-size: 24px;
+  }
+}
+
+.logo img {
+  width: 150px;
+  height: 50px;
+  margin: 25px 0 0 25px;
+  overflow: hidden;
+}
+
+.main-heading {
+  font-size: 30px;
+  font-family: "Carter One", cursive;
+  color: #FFA730;
+}
+@media screen and (min-width: 700px) {
+  .main-heading {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .main-heading {
+    font-size: 30px;
+  }
+}
+
+.sub-heading {
+  font-size: 20px;
+  font-family: "Laila", sans-serif;
+  color: rgb(252, 249, 249);
+  font-weight: 400;
+  margin: 15px 0;
+}
+
+.main-button {
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 49, 87, 0.77);
+  background-color: transparent;
+  color: rgba(255, 49, 87, 0.77);
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Carter One", cursive;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-top: 50px;
+}
+.main-button:hover {
+  color: rgb(252, 249, 249);
+  background-color: rgba(255, 49, 87, 0.77);
+  font-weight: 500;
+  box-shadow: 2px 5px;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  background-color: rgb(252, 249, 249);
+  padding: 25px;
+  margin: 20px 10px;
+  border-radius: 10px;
+}
+.card img {
+  width: 100%;
+  border-radius: 5px;
+  margin: 25px 0;
+  height: 50vw;
+}
+.card-body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 20px 0;
+}
+.card-body:hover .card-button {
+  font-weight: bold;
+}
+.card-titel {
+  font-size: 20px;
+  font-family: "Chewy", cursive;
+  letter-spacing: 2px;
+}
+@media screen and (min-width: 700px) {
+  .card-titel {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .card-titel {
+    font-size: 30px;
+  }
+}
+.card-text {
+  font-family: "Laila", sans-serif;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 700px) {
+  .card-text {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .card-text {
+    font-size: 24px;
+  }
+}
+.card-button {
+  padding: 10px 20px;
+  background-color: rgba(255, 49, 87, 0.77);
+  color: rgb(252, 249, 249);
+  border: none;
+  font-size: 20px;
+}
+.card-button:hover {
+  color: #fff;
+  font-weight: bold;
+}
+
+.filter-button {
+  background-color: rgba(255, 49, 87, 0.77);
+  color: rgb(252, 249, 249);
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.filter-checkbox {
+  display: none;
+}
+
+#filter-toggle:checked + .filter-button {
+  background-color: #FFA730;
+}
+
+.filter-opties {
+  display: none;
+  margin: 50px auto;
+}
+.filter-opties .filter-optie {
+  display: inline-block;
+  background-color: rgba(194, 146, 100, 0.37);
+  color: #054A69;
+  margin: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+}
+.filter-opties .filter-optie:hover {
+  color: rgb(252, 249, 249);
+  background-color: #FFA730;
+  font-weight: 500;
+  box-shadow: 2px 5px;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+#filter-toggle:checked + .filter-button + .filter-opties {
+  display: block;
+}
+
+.card-categorie {
+  display: flex;
+  margin: 20px 10px;
+}
+.card-categorie:hover {
+  color: rgb(252, 249, 249);
+  background-color: rgba(255, 49, 87, 0.77);
+  font-weight: 500;
+  box-shadow: 2px 5px;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+.card-categorie-image {
+  width: 200px;
+  height: 150px;
+}
+.card-categorie-body {
+  background-color: rgba(192, 190, 190, 0.63);
+  width: 250px;
+  border-radius: 5px;
+  padding: 15px;
+}
+.card-categorie-body h4 {
+  color: #054A69;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.login-form {
+  width: 80vw;
+  height: 40vh;
+  background-color: rgba(146, 174, 192, 0.95);
+  padding: 25px 35px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.login-form label {
+  font-weight: bold;
+  margin: 25px 0 10px;
+}
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(146, 174, 192, 0.95);
+  border-radius: 5px;
+}
+.login-form button {
+  align-self: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 25px;
+}
+.login-form button:hover {
+  background-color: #FFA730;
+}
+
+.wachtwoord-vergeten {
+  margin-top: 10px;
+  text-decoration: none;
+  color: rgb(252, 249, 249);
+  font-weight: bold;
+}
+.wachtwoord-vergeten:hover {
+  text-decoration: underline;
+}
+
+.info-table {
+  width: 100%;
+}
+.info-table tr:nth-child(odd) {
+  background-color: rgba(121, 120, 126, 0.31);
+}
+.info-table td {
+  padding: 5px;
+}
+
+.nav {
+  height: 180px;
+  background-color: #054A69;
+}
+
+.header {
+  height: 100vh;
+  background-image: url("../assets/images/producten/jackie-hope-h0V-UV6Fa4Y-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header-nav {
+  font-family: "Laila", sans-serif;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+@media screen and (min-width: 700px) {
+  .header-nav {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .header-nav {
+    font-size: 24px;
+  }
+}
+.header-nav-item {
+  margin: 25px 0;
+  list-style: none;
+  align-self: center;
+}
+.header-nav a {
+  text-decoration: none;
+  color: rgb(252, 249, 249);
+  padding: 10px 20px;
+}
+.header-nav a:hover {
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 49, 87, 0.77);
+  background-color: transparent;
+  color: rgba(255, 49, 87, 0.77);
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-align: center;
+  color: rgb(252, 249, 249);
+  background-color: rgba(255, 49, 87, 0.77);
+  font-weight: 500;
+  box-shadow: 2px 5px;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+.header-banner {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 5%;
+  margin-top: 100px;
+}
+
+.about {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.about .section-info {
+  margin: 25px 0;
+  width: 90%;
+}
+.about .section-info h3 {
+  color: rgba(255, 49, 87, 0.77);
+}
+.about .section-info p {
+  font-family: "Laila", sans-serif;
+  font-size: 20px;
+}
+.about .section-image {
+  width: 90%;
+  margin: 5%;
+}
+.about .section-image img {
+  width: 100%;
+  border-radius: 5px;
+  margin: 25px 0;
+  height: 250px;
+}
+
+@media screen and (min-width: 700px) {
+  .kijker h3 {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .kijker h3 {
+    font-size: 30px;
+  }
+}
+.kijker .cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.contact {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact .section-info {
+  margin: 25px 0;
+  width: 90%;
+}
+.contact .section-info h3 {
+  color: rgba(255, 49, 87, 0.77);
+}
+.contact .section-info p {
+  font-family: "Laila", sans-serif;
+  font-size: 20px;
+}
+.contact .section-image {
+  width: 90%;
+  margin: 5%;
+}
+.contact .section-image img {
+  width: 100%;
+  border-radius: 5px;
+  margin: 25px 0;
+  height: 250px;
+}
+
+.footer {
+  font-family: "Laila", sans-serif;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 35px;
+  background-color: #514E64;
+  align-content: space-between;
+}
+@media screen and (min-width: 700px) {
+  .footer {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .footer {
+    font-size: 24px;
+  }
+}
+.footer-nav-item {
+  list-style: none;
+}
+.footer-nav-item a {
+  color: rgb(252, 249, 249);
+}
+.footer-nav-item a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.producten {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.producten p {
+  margin: 15px 0;
+}
+.producten p:last-of-type {
+  margin-bottom: 50px;
+}
+.producten .cards {
+  margin: 50px 0;
+  background-color: rgba(146, 174, 192, 0.95);
+}
+.producten button[type=button] {
+  margin: auto;
+}
+
+.popular-categorieen {
+  margin: 50px;
+  padding: 2%;
+}
+.popular-categorieen h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #054A69;
+}
+.popular-categorieen .cards-categorieen {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  background-color: #054A69;
+  min-height: 100vh;
+}
+
+.product-info {
+  padding: 2%;
+  margin: 25px 0;
+}
+.product-info-image {
+  max-width: 700px;
+  min-width: 350px;
+}
+.product-info-image img {
+  width: 100%;
+  border-radius: 5px;
+  margin: 25px 0;
+}
+.product-info-prijs {
+  font-size: 30px;
+  text-align: center;
+}
+.product-info-voorraad {
+  text-align: center;
+  background-color: rgba(146, 174, 192, 0.95);
+  padding: 5px 0;
+  color: #231F1F;
+}
+.product-info-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product-info-detail h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 700px) {
+  .logo {
+    margin: auto 0;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+  }
+  .header .main-heading {
+    font-size: 53px;
+  }
+  .header .sub-heading {
+    font-size: 30px;
+  }
+  .header .main-button {
+    width: 200px;
+    font-size: 30px;
+  }
+  .main {
+    padding: 5%;
+  }
+  .about .section-info {
+    width: 50%;
+  }
+  .about .section-info h3 {
+    font-size: 30px;
+  }
+  .about .section-image {
+    width: 40%;
+  }
+  .kijker {
+    padding: 2%;
+  }
+  .kijker .card {
+    width: 30%;
+  }
+  .kijker .card img {
+    height: 25vw;
+  }
+  .contact {
+    flex-flow: row wrap;
+    position: relative;
+    height: 700px;
+  }
+  .contact .section-info {
+    width: 50%;
+  }
+  .contact .section-info h3 {
+    font-size: 30px;
+  }
+  .contact .section-image {
+    width: 40%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .contact .section-image img {
+    outline: none;
+  }
+  .producten .cards {
+    padding: 2% 5%;
+  }
+  .producten .cards .card {
+    width: 35vw;
+  }
+  .producten .cards .card img {
+    height: 250px;
+  }
+  .producten .cards .card-titel {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+  .producten .cards .card-text {
+    margin: 20px 0;
+    font-size: 16px;
+  }
+  .login-form {
+    max-width: 500px;
+  }
+  .product-info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+  .product-info-image {
+    width: 50%;
+  }
+  .product-info-body {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .main {
+    padding: 10%;
+  }
+  .producten .cards .card {
+    width: 30%;
+  }
+  .footer {
+    height: 350px;
+    align-items: center;
+  }
+  .footer-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

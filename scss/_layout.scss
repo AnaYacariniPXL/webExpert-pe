@@ -1,0 +1,173 @@
+@use "base" as *;
+
+
+.nav {
+  height:180px;
+  background-color: #054A69;
+}
+.header{
+  height: 100vh;
+  background-image: url("../assets/images/producten/jackie-hope-h0V-UV6Fa4Y-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+ &-nav{
+    @include nav-layout;
+
+    &-item{
+      margin: 25px 0 ;
+      list-style: none;
+      align-self: center;
+
+    }
+    a{
+      text-decoration: none;
+      color: $color-white;
+      padding: 10px 20px;
+      &:hover{
+        @include button-style();
+       @include hover();
+      }
+    }
+  }
+
+
+  &-banner{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 5%;
+    margin-top: 100px;
+
+  }
+  }
+
+
+.about{
+ position: relative;
+  @include section-layout();
+
+}
+
+
+.kijker{
+h3{
+@extend %section-titel;
+  @include responsive-titel();
+
+}
+  .cards{
+    @include flex-style();
+    flex-direction: row;
+
+  }
+
+}
+.contact{
+  @include section-layout();
+}
+
+.footer{
+  @include nav-layout();
+  flex-direction: column;
+padding: 35px;
+background-color: #514E64;
+  align-content: space-between;
+
+  &-nav{
+
+    &-item{
+list-style: none;
+      a{
+        color: $color-white;
+        &:hover{
+          font-weight: bold;
+          text-decoration: underline;
+
+        }
+      }
+
+    }
+  }
+
+}
+
+.producten{
+  display: flex;
+  flex-flow: column nowrap;
+  p{
+    margin:15px 0;
+  }
+  p:last-of-type{
+    margin-bottom: 50px;
+  }
+  .cards{
+    margin: 50px 0;
+    background-color: $color-bg-pastel;
+  }
+button[type='button']{
+margin: auto ;
+}
+
+
+}
+.popular-categorieen{
+margin: 50px;
+  padding: 2%;
+  h3{
+    font-size: $font-ml;
+  margin-bottom: 15px;
+    color: $color-bg;
+  }
+  .cards-categorieen{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+}
+.login-container{
+  @include flex-style;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-bg;
+  min-height: 100vh;
+}
+.product-info{
+padding: 2%;
+  margin: 25px 0;
+
+  &-image{
+    max-width: 700px;
+    min-width: 350px;
+    img{
+@include image-style();
+    }
+  }
+
+  &-prijs{
+    font-size: $font-xl;
+    text-align: center;
+  }
+  &-voorraad{
+    text-align: center;
+    background-color: $color-bg-pastel;
+    padding: 5px 0;
+    color: $color-black;
+  }
+&-buttons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+}
+.product-info-detail{
+
+    h3{
+      font-size: $font-md;
+      margin-bottom: 10px;
+    }
+
+  }
+
+

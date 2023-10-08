@@ -1,0 +1,135 @@
+//VARIABLES
+//COLOR
+$color-primary: rgba(255, 49, 87, 0.77);
+$color-secondary: #FFA730;
+$color-black: #231F1F;
+$color-white: rgb(252, 249, 249);
+$color-bg:#054A69;
+$color-bg-pastel: rgba(146, 174, 192, 0.95);
+
+
+//FONT-SIZE/
+
+$font-sm: 16px;
+$font-md: 20px;
+$font-ml: 24px;
+$font-xl: 30px;
+$font-accent: 45px;
+
+//FONT-FAMILY
+
+$font-carter-titel: 'Carter One', cursive;
+$font-laila-text:'Laila', sans-serif;
+$font-chewy-titel:'Chewy', cursive;
+
+* {
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: $color-white;
+
+}
+
+@mixin responsive-titel{
+  @media screen and (min-width: 700px){
+    font-size: $font-ml;
+  }
+  @media screen and (min-width: 1000px){
+    font-size: $font-xl;
+  }
+}
+
+
+@mixin responsive-text{
+  @media screen and (min-width: 700px){
+    font-size: $font-md;
+  }
+  @media screen and (min-width: 1000px){
+    font-size: $font-ml;
+  }
+};
+
+
+@mixin nav-layout{
+  @include responsive-text();
+  font-family: $font-laila-text;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+@mixin flex-style(){
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+@mixin image-style{
+  width: 100%;
+  border-radius: 5px;
+  margin: 25px 0;
+};
+@mixin button-style($bg-button:transparent, $color-button: $color-primary ){
+  padding: 10px 20px;
+  border-radius: 50px;
+  border:1px solid $color-primary;
+  background-color:$bg-button;
+  color: $color-button;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-align: center;
+
+}
+@mixin hover($bg-color:$color-primary){
+  color: $color-white;
+  background-color: $bg-color ;
+  font-weight: 500 ;
+  box-shadow: 2px 5px;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+%section-titel{
+  font-family: $font-chewy-titel;
+  letter-spacing: 2px;
+  font-size: $font-ml;
+  margin-bottom: 50px;
+}
+
+@mixin section-layout{
+margin-top: 50px;
+  @include flex-style();
+
+      .section-info{
+        margin: 25px 0;
+        width: 90%;
+
+    h3{
+     @extend %section-titel;
+      color: $color-primary;
+    }
+        p{
+          font-family: $font-laila-text;
+          font-size: $font-md;
+        }
+      }
+      .section-image{
+        width: 90%;
+        margin: 5% ;
+
+        img{
+       @include image-style();
+          height: 250px;
+        }
+      }
+    }
+
+
+
+p{
+  @include responsive-text();
+
+}
+
+
