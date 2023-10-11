@@ -15,6 +15,15 @@ body {
   margin-bottom: 50px;
 }
 
+.footer-nav-item a, .wachtwoord-vergeten {
+  color: rgb(252, 249, 249);
+  text-decoration: none;
+}
+.footer-nav-item a:hover, .wachtwoord-vergeten:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 700px) {
   p {
     font-size: 20px;
@@ -221,7 +230,7 @@ body {
 
 .login-form {
   width: 80vw;
-  height: 40vh;
+  height: 350px;
   background-color: rgba(146, 174, 192, 0.95);
   padding: 25px 35px;
   border-radius: 5px;
@@ -249,16 +258,6 @@ body {
 }
 .login-form button:hover {
   background-color: #FFA730;
-}
-
-.wachtwoord-vergeten {
-  margin-top: 10px;
-  text-decoration: none;
-  color: rgb(252, 249, 249);
-  font-weight: bold;
-}
-.wachtwoord-vergeten:hover {
-  text-decoration: underline;
 }
 
 .info-table {
@@ -337,6 +336,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 .about .section-info {
   margin: 25px 0;
@@ -382,6 +382,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 .contact .section-info {
   margin: 25px 0;
@@ -428,12 +429,15 @@ body {
 .footer-nav-item {
   list-style: none;
 }
-.footer-nav-item a {
-  color: rgb(252, 249, 249);
+@media screen and (min-width: 700px) {
+  .footer-nav-item a {
+    font-size: 20px;
+  }
 }
-.footer-nav-item a:hover {
-  font-weight: bold;
-  text-decoration: underline;
+@media screen and (min-width: 1000px) {
+  .footer-nav-item a {
+    font-size: 24px;
+  }
 }
 
 .producten {
@@ -480,7 +484,6 @@ body {
 }
 
 .product-info {
-  padding: 2%;
   margin: 25px 0;
 }
 .product-info-image {
@@ -495,6 +498,7 @@ body {
 .product-info-prijs {
   font-size: 30px;
   text-align: center;
+  margin: 15px 0;
 }
 .product-info-voorraad {
   text-align: center;
@@ -502,15 +506,30 @@ body {
   padding: 5px 0;
   color: #231F1F;
 }
-.product-info-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.product-info-detail {
+  margin: 30px 0;
 }
-
 .product-info-detail h3 {
   font-size: 20px;
   margin-bottom: 10px;
+}
+
+.product-winkelmandje {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.product-winkelmandje input {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50px;
+  border: 1px solid rgba(96, 99, 101, 0.71);
+}
+.product-winkelmandje input:hover {
+  border-color: rgba(255, 49, 87, 0.77);
 }
 
 @media screen and (min-width: 700px) {

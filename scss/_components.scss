@@ -47,8 +47,7 @@ font-size: $font-xl;
     height: 50vw;
   }
   &-body{
-    @include flex-style;
-    flex-direction: column;
+    @include flex-style();
     padding: 20px 0;
 
 &:hover .card-button{
@@ -149,7 +148,7 @@ h4{
 
   .login-form{
     width: 80vw;
-    height: 40vh;
+    height: 350px;
     background-color: $color-bg-pastel;
     padding: 25px 35px;
     border-radius: 5px;
@@ -182,16 +181,12 @@ h4{
     }
   }
   .wachtwoord-vergeten{
-    margin-top: 10px;
-    text-decoration: none;
-    color: $color-white;
-    font-weight: bold;
-    &:hover{
-      text-decoration: underline;
-    }
+    @extend %secondary-links;
+
   }
 .info-table{
     width: 100%;
+
 
 tr{
 

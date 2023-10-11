@@ -25,7 +25,7 @@ Hou hier nu ook al rekening mee.
 
             <li class=" header-nav-item"><a href="../paginas/overzicht_producten.html">Producten</a></li>
             <li class=" header-nav-item"><a href="../paginas/loginpagina.html">Aanmelden</a></li>
-            <li class=" header-nav-item"><a href="#">Kart</a></li>
+            <li class=" header-nav-item"><a href="#">Winkelmandje</a></li>
 
         </ul>
     </nav>
@@ -53,6 +53,16 @@ Hou hier nu ook al rekening mee.
                 <p class="product-info-voorraad">Op voorraad</p>
             </div>
 
+            <div class="product-winkelmandje">
+                <div class="aantal-producten">
+                    <label for="hoeveelheid"></label>
+                    <input type="number" id="hoeveelheid" name="hoeveelheid" value="1" min="1">
+                    <button class="main-button">-</button>
+                    <button class="main-button ">+</button>
+                </div>
+
+                <button type="button" class="main-button ">In winkelmandje</button>
+            </div>
 
             <div class="product-info-detail ">
                 <h3>Specificaties</h3>
@@ -85,13 +95,13 @@ Hou hier nu ook al rekening mee.
                 </table>
 
             </div>
-            <div class="product-info-buttons">
-            <button type="button" class="main-button">Koop nu</button>
-            <button type="button" class="main-button ">In winkelmandje</button>
-            </div>
+
         </div>
 
+
     </div>
+
+
     <section class="kijker">
         <h3 class="card-titel">Andere kochten ook</h3>
         <div class="cards">
@@ -107,7 +117,7 @@ Hou hier nu ook al rekening mee.
                 <img src="../assets/images/producten/mockup-graphics-F-_5X92mH1Q-unsplash.jpg" alt=""/>
                 <div class="card-body">
                     <h4 class="card-titel">Moonie knuffel</h4>
-                    <p class="card-text">met licht en geluid konijn Sky</p>
+                    <p class="card-text">Met licht en geluid konijn Sky</p>
                     <button class="card-button">Nu kopen</button>
                 </div>
             </div>
@@ -115,12 +125,14 @@ Hou hier nu ook al rekening mee.
                 <img src="../assets/images/producten/kids-me-germany-Zzgmde4_lYU-unsplash%20(1).jpg" alt=""/>
                 <div class="card-body">
                     <h4 class="card-titel">Jellycat knuffel beer</h4>
-                    <p class="card-text"> hij makkelijk blijft zitten.</p>
+                    <p class="card-text"> Jellycat knuffel makkelijk blijft zitten.</p>
                     <button class="card-button">Nu kopen</button>
                 </div>
             </div>
 
-            <button type="button" class="main-button">Kijk alles &rarr;</button>
+            <button type="button" class="main-button" onclick="window.location.href='overzicht_producten.html'">Kijk
+                alles &rarr;
+            </button>
         </div>
 
 

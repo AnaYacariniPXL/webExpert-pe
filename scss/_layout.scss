@@ -57,8 +57,7 @@ h3{
 
 }
   .cards{
-    @include flex-style();
-    flex-direction: row;
+    @include flex-style(row);
 
   }
 
@@ -75,26 +74,23 @@ background-color: #514E64;
   align-content: space-between;
 
   &-nav{
-
     &-item{
 list-style: none;
       a{
-        color: $color-white;
-        &:hover{
-          font-weight: bold;
-          text-decoration: underline;
-
+       @extend %secondary-links;
+        @include responsive-text();
         }
       }
 
     }
-  }
+
 
 }
 
 .producten{
   display: flex;
   flex-flow: column nowrap;
+
   p{
     margin:15px 0;
   }
@@ -126,14 +122,14 @@ margin: 50px;
   }
 }
 .login-container{
-  @include flex-style;
-  flex-direction: column;
+  @include flex-style();
   align-items: center;
   background-color: $color-bg;
   min-height: 100vh;
+
 }
 .product-info{
-padding: 2%;
+//padding: 2%;
   margin: 25px 0;
 
   &-image{
@@ -147,6 +143,7 @@ padding: 2%;
   &-prijs{
     font-size: $font-xl;
     text-align: center;
+    margin: 15px 0;
   }
   &-voorraad{
     text-align: center;
@@ -154,20 +151,33 @@ padding: 2%;
     padding: 5px 0;
     color: $color-black;
   }
-&-buttons{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  &-detail{
 
-}
-}
-.product-info-detail{
-
+    margin: 30px 0;
     h3{
       font-size: $font-md;
       margin-bottom: 10px;
     }
+}
 
+}
+
+.product-winkelmandje{
+  @include flex-style();
+  justify-content: space-around;
+
+  input{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50px;
+    border: 1px solid rgba(96, 99, 101, 0.71);
+
+    &:hover{
+      border-color: $color-primary ;
+    }
   }
+}
+
 
 
